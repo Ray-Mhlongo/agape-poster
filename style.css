@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --agape-blue: #075da8;
+  --soft-blue: #5fa8df;
+  --page-width: 1240px;
+  --page-height: 1754px;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: #eef4f9;
+  color: var(--agape-blue);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+.poster {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(7, 93, 168, 0.08), transparent 24%),
+    radial-gradient(circle at 50% 52%, rgba(7, 93, 168, 0.05), transparent 34%),
+    #ffffff;
+  border: 2px solid var(--agape-blue);
+  box-shadow: 0 24px 70px rgba(5, 35, 70, 0.2);
+  transform: scale(min(calc(100vw / var(--page-width)), calc(100dvh / var(--page-height))));
+  transform-origin: center center;
+}
+
+.posterContent {
+  height: calc(100% - 92px);
+  padding: 48px 124px 24px;
+  text-align: center;
+}
+
+.churchLogo {
+  display: block;
+  width: 260px;
+  height: auto;
+  margin: 0 auto 18px;
+}
+
+.churchName {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 8px;
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 14px 0 28px;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.tagline span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--agape-blue);
+}
+
+h1 {
+  margin: 0;
+  font-size: 98px;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.welcomeLine {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  margin: 14px auto 20px;
+}
+
+.welcomeLine span,
+.sectionTitle span {
+  display: block;
+  height: 3px;
+  background: var(--agape-blue);
+}
+
+.welcomeLine p {
+  margin: 0;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.instruction {
+  margin: 0 0 22px;
+  font-size: 31px;
+  line-height: 1.38;
+  font-weight: 500;
+}
+
+.instruction strong {
+  font-weight: 800;
+}
+
+.qrPanel {
+  width: 490px;
+  margin: 0 auto;
+  border: 3px solid var(--soft-blue);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.scanBar {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(180deg, #62ace2 0%, var(--agape-blue) 100%);
+  color: #ffffff;
+}
+
+.scanBar span {
+  width: 34px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.scanBar b {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.scanBar p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+.qrBox {
+  padding: 24px 46px 28px;
+}
+
+.qrBox img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.timePill {
+  width: 490px;
+  height: 58px;
+  margin: 18px auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #62ace2 0%, var(--agape-blue) 100%);
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.clockIcon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+svg {
+  display: block;
+}
+
+.clockIcon svg,
+.roundIcon svg {
+  width: 74%;
+  height: 74%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sectionTitle {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  margin: 0 52px 18px;
+}
+
+.sectionTitle h2 {
+  margin: 0;
+  font-size: 29px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+  align-items: start;
+  gap: 0;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.benefitDivider {
+  height: 155px;
+  background: var(--soft-blue);
+}
+
+.roundIcon {
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  border: 3px solid var(--agape-blue);
+  border-radius: 50%;
+}
+
+.benefit p {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  background: var(--agape-blue);
+  color: #ffffff;
+}
+
+footer span,
+footer strong {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+footer strong {
+  letter-spacing: 4px;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    position: static;
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  body {
+    display: block;
+  }
+
+  .poster {
+    width: 210mm;
+    height: 297mm;
+    border: 0;
+    box-shadow: none;
+    transform: none;
+  }
+}
