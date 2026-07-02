@@ -137,8 +137,39 @@ h1 {
   background: #ffffff;
 }
 
+.scanBar {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(180deg, #62ace2 0%, var(--agape-blue) 100%);
+  color: #ffffff;
+}
+
+.scanBar span {
+  width: 34px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.scanBar b {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.scanBar p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
 .qrBox {
-  padding: 36px 46px;
+  padding: 24px 46px 28px;
 }
 
 .qrBox img {
@@ -148,13 +179,17 @@ h1 {
   object-fit: contain;
 }
 
-.timeText {
-  margin: 18px auto 18px;
+.timePill {
+  width: 490px;
+  height: 66px;
+  margin: 20px auto 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  color: var(--agape-blue);
+  gap: 16px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #62ace2 0%, var(--agape-blue) 100%);
+  color: #ffffff;
   font-size: 29px;
   font-weight: 800;
 }
@@ -162,9 +197,9 @@ h1 {
 .clockIcon {
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
-  border: 2px solid var(--agape-blue);
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ffffff;
   border-radius: 50%;
 }
 
